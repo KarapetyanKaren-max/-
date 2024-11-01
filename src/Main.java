@@ -54,7 +54,6 @@ public class Main {
         System.out.println("Задача 4");
         int[] code = {1, 2, 3};
         for (int y = 0; y < code.length; y++) {
-            if (code[y] % 2 != 0) ;
             {
                 code[y] = code[y] + 1;
             }
