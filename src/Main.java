@@ -46,7 +46,7 @@ public class Main {
         System.out.println("Задание 3");
         int[] salaryArray = generateRandomArray();
         System.out.println(Arrays.toString(salaryArray));
-        int salarySun = 0;
+        float salarySun = 0;
         for (int salary : salaryArray) {
             salarySun += salary;
         }
@@ -57,13 +57,19 @@ public class Main {
     private static void task4() {
         System.out.println("Задание 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 0; i < reverseFullName.length / 2; i++) {
-            char temp = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
-            reverseFullName[reverseFullName.length - 1 - i] = temp;
+        for (int i = reverseFullName.length - 1; i >- 0; i--) {
         }
-        System.out.println(Arrays.toString(reverseFullName));
-    }
+        System.out.println();
+        int n = reverseFullName.length;
+        char temp;
+        for (int i = 0; i < n / 2; i++) {
+            temp = reverseFullName[n - i - 1];
+            reverseFullName[n - i - 1] = reverseFullName[i];
+            reverseFullName[i] = temp;
+        }
+        System.out.print(Arrays.toString(reverseFullName));
+        System.out.print(reverseFullName);
+            }
 
 
     public static int[] generateRandomArray() {
