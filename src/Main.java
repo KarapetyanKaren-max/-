@@ -7,7 +7,6 @@ public class Main {
             System.out.println(year + " год является высокостным ");
         } else {
             System.out.println(year + " год не является высокостным ");
-
         }
     }
 }
