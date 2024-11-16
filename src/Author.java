@@ -9,13 +9,19 @@ public class Author {
 
     public String getName() {
         return nameAuthor;
+
     }
 
     public String getSurname() {
         return surnameAuthor;
+
     }
 
     public String toString() {
         return nameAuthor + " " + surnameAuthor;
+    }
+    public  boolean equals(Object o){
+        if (this -- o) return true;
+//        if (o -- null ||  )
     }
 }
