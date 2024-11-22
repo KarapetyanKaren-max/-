@@ -6,22 +6,27 @@ public class Employee {
     int salary;
     static int count;
     private int id;
+
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
-        this. salary = salary;
+        this.salary = salary;
         this.id = count++;
     }
+
     public static int id(int i) {
         i++;
         return i;
     }
+
     String getFullName() {
         return this.fullName;
     }
+
     int getDepartment() {
         return this.department;
     }
+
     int getSalary() {
         return this.getSalary();
     }
@@ -49,4 +54,4 @@ public class Employee {
         return Objects.hash(fullName, department, salary, id);
     }
 
-    }
+}
