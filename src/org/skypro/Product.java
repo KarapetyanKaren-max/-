@@ -1,17 +1,23 @@
 package org.skypro;
 
-    public class Product {
-        public static void main(String[] args) {
+import java.util.Objects;
 
-        }
-    private int name;
+public class Product {
+
+    public String productsName;
+    private String name;
     private int price;
 
-    public int getName() {
+    public Product(int price, String name) {
+        this.price = price;
+        this.name = name;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -21,6 +27,27 @@ package org.skypro;
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return price == product.price && Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name=" + name +
+                ", price=" + price +
+                '}';
     }
 }
 
