@@ -36,7 +36,6 @@ public class Product {
         Product product = (Product) o;
         return price == product.price && Objects.equals(name, product.name);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name, price);
