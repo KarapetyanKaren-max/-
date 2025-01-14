@@ -4,42 +4,35 @@ public class App {
     private static Product[] products;
 
     {
-        Product milk = new Product(15, "milk");
-        System.out.println(milk);
-        ProductBasket basket = new ProductBasket();
-        System.out.println(basket);
+        new Product(25, "Молоко");
+        new Product(50, "Рыба");
+        new Product(35, "Хрен");
+        new Product(120, "Масло");
+        new Product(540, "Торт");
     }
 
     static ProductBasket basket = new ProductBasket();
 
     static void addProduct(String name) {
-        boolean productAvailability = false;
         for (int number = 0; number < products.length; number++) {
             if (products[number].productsName.equalsIgnoreCase(name.trim())) {
                 System.out.println("Продукт есть в магазине");
                 basket.addProduct(products[number]);
-                productAvailability = true;
                 break;
 
+            } else {
+                System.out.println("Продукта в магазине нет");
             }
-        }
-        if (!productAvailability) {
-            System.out.println("Продукта в магазине нет");
         }
     }
 
     public static void main(String[] args) {
         System.out.println("Добави продукт в корзину");
-        String product1 = "молоко";
-        String product2 = "рыба";
-        String product3 = "хрен";
-        String product4 = "масло";
-        String product5 = "торт";
-        addProduct(product1);
-        addProduct(product2);
-        addProduct(product3);
-        addProduct(product4);
-        addProduct(product5);
+        String product = "молоко";
+        addProduct(product);
+        addProduct(product);
+        addProduct(product);
+        addProduct(product);
         basket.printBasket();
         System.out.println("Стоимость корзины: " + basket.priceBasket());
     }
